@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-direction: column;
+}
+.container{
+ text-align: center;   
+}
+.progress-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    position: relative;
+    max-width: 100%;
+    width: 350px;
+}
+.progress-container::before {
+    content: '';
+    background: rgb(212, 212, 212);
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    z-index: -2;
+    transition: 0.4s all ease-in-out;
+}
+.progress{
+    background: rgb(236, 19, 146);
+    position: absolute;
+    width: 0%;
+    height: 4px;
+    z-index: -1;
+    transition: 0.4s all ease-in-out;
+}
+.circle{
+    border:3px solid rgb(212, 212, 212);
+    background:white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s all ease-in-out;
+}
+.circle.active{
+        border-color: rgb(236, 19, 146);
+}
+
+.btn{
+    background: #767fff;
+    border: none;
+    font-size: 1.2rem;
+    color: white;
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+    border: 2px solid rgba(157, 104, 255, 0.63);
+    cursor: pointer;
+    margin: 0 1rem;
+}
+.btn:active{
+    transform: scale(.90);
+}
+.btn:disabled{
+    background: #cecece;
+    border: none;
+    cursor: not-allowed;
+}
+
+.one{
+    padding: 2rem;
+    text-align: left !important;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(236, 19, 146);
+    margin: 1rem;
+    color: white;
+    font-weight: lighter;
+    display: none;
+    position: relative;
+        width: 100%;
+        /* Adjust according to your design */
+        height: 200px;
+        /* Adjust according to your design */
+        border: 1px solid black;
+        /* Just for visualization */
+}
+.child{
+    width: 60%;
+    position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+}
+.child input{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 0px 10px 0px gray;
+}
+.child button{
+    margin: 0;
+    margin-top: 10px;
+}
+.active-para{
+    display: block;
+}
