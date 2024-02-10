@@ -7,10 +7,10 @@
 }
 body{
     overflow-x: hidden;
-    background: #303030;
+    background: #000000;
 }
 .container{
-    background: white;
+    background: rgb(14, 13, 13);
       transform-origin: top left;
       transition: 0.4s all linear;
       padding: 50px;
@@ -20,34 +20,119 @@ body{
     transform: rotate(-20deg);
   
 }
-.circle-container{
-    border: 2px solid black;
+
+.container.show-nav+nav li{
+    transform:translate(0%);
+    transition-delay: 0.3s;
+}
+nav{
     position: fixed;
-    top: -50px;
-    left: -50px;
+    bottom: 0px;
+    left: 10px;
+    color: rgb(211, 211, 211);
+}
+nav ul{
+    list-style: none;
+}
+nav ul li{
+    margin: 20px 0;
+    transform: translateX(-100%);
+    transition: 0.4s all ease-in-out;
+    color: #dd26d4;
+}
+nav ul li *{
+    filter: drop-shadow( 0px 0px 10px #ea00ff);
+}
+nav ul li i{
+    margin-right: 10px;
+}
+nav ul li+li{
+    transform: translateX(-130%);
+    margin-left: 15px;
+    transition: 0.5s all ease-in-out;
+}
+nav ul li+li+li {
+    margin-left: 30px;
+    transform: translateX(-160%);
+    transition: 0.6s all ease-in-out;
+}
+
+.circle-container{
+    position: absolute;
+    top: -60px;
+    left: -60px;
+   
 }
 .circle{
-    background: #f76a51;
+background: linear-gradient(135deg, rgb(189, 0, 214), rgba(5, 9, 236, 0.815));
     height: 120px;
     width: 120px;
     border-radius: 50%;
-    position: relative;
+    position:relative;
+    transition: 0.4s all ease-in-out;
+}
+.container.show-nav .circle {
+    transform: rotate(-70deg);
+    transition: 0.4s all linear;
 }
 .circle button{
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 50%;
     height: 50px;
     background: transparent;
     border: none;
     font-size: 1.5rem;
     color: white;
+    cursor: pointer;
+
 }
 .circle button#open{
-    left: 60%;
+    left: 55%;
 }
 .circle button#close {
-    top: 60%;
+    top: 55%;
     transform-origin: top left;
     transform: rotate(90deg);
+}
+.content{
+    max-width: 80%;
+    margin: 0 auto;
+}
+.content h1{
+    font-weight: 600;
+    background: linear-gradient(135deg,rgb(189, 0, 214),rgba(5, 9, 236, 0.815));
+    color: transparent;
+    background-clip: text;
+}
+.content small{
+    color: #858585;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+}
+.content img{
+    width: 100%;
+    border-radius: 20px;
+    height: 50vh;
+    object-fit: cover;
+}
+.content p{
+    font-size: 0.9rem;
+    color: rgb(126, 126, 126);
+    text-align: justify;
+}
+.content h3{
+    width: fit-content;
+    margin-top: 20px;
+    background: linear-gradient(135deg, rgb(189, 0, 214), rgba(5, 9, 236, 0.815));
+    color: white;
+    padding: 0.7rem;
+    border-radius:10px 10px 0px  0px;
+}
+.content .doggo
+{
+    background: linear-gradient(135deg, rgb(189, 0, 214), rgba(5, 9, 236, 0.815));
+    color: rgb(238, 238, 238);
+    padding: 0.7rem;
+    border-radius: 0px 10px ;
 }
