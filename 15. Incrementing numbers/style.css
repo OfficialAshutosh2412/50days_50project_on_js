@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  width: 75%;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: #1f1f1f;
+  color: white;
+}
+.container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 50px;
+  padding: 30px;
+  position: relative;
+  box-shadow: 1px 1px 5px 0px rgb(255, 255, 255);
+  border-radius: 20px;
+  transition: 0.7s all linear;
+}
+.container:nth-child(1) {
+  background: linear-gradient(45deg, rgb(156, 48, 206), rgb(0, 82, 37));
+}
+.container:nth-child(2) {
+  background: linear-gradient(45deg, rgb(21, 109, 180), rgb(13, 13, 117));
+}
+.container:nth-child(3) {
+  background: linear-gradient(
+    45deg,
+    rgb(170, 173, 66),
+    rgb(160, 17, 84),
+    rgb(175, 49, 49)
+  );
+}
+.container i {
+  font-size: 2rem;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 100;
+  background: white;
+  padding: 10px;
+  color: #9228cf;
+  border-radius: 50%;
+  box-shadow: 1px 1px 10px 0px black;
+}
+
+.counter {
+  font-size: 3rem;
+  margin: 10px;
+}
+.container p {
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 749px) {
+  .container {
+    margin: 10px;
+  }
+}
+
+@media (max-width: 573px) {
+  body {
+    flex-direction: column;
+  }
+}
